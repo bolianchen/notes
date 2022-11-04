@@ -11,7 +11,7 @@ The radially symmetric distortion of fisheye lenses is incorporated in the follo
 
 $$ \theta_{d} = \theta(1+k_1\theta^2+k_2\theta^4+k_3\theta^6+k_4\theta^8) $$
 
-3D points are distortedly projected onto the normalized image coordinates(focal length = 1). Please notice $\theta_d$ represents the length from the optical axis to the projected point on the normalized image coordinates. It is more like a radius rather than an angle. Two components x' and y' are computed as:      
+3D points are distortedly projected onto the normalized image plane(focal length = 1). Please notice $\theta_d$ represents the length from the optical axis to the projected point on the normalized image plane. It is more like a radius rather than an angle. Two components x' and y' are computed as:      
 
 $$ x' = \theta_{d}cos\varphi = \theta_{d}({a \over r});\ y' = \theta_{d}sin\varphi=\theta_{d}({b \over r})$$
 
