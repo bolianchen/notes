@@ -7,11 +7,16 @@ Considering the projection from a 3D point $P(x, y, z)$ to a image plane, polar 
 $$ a = {x \over z};\ b = {y \over z};\ r^2=a^2+b^2 $$ 
 $$ => \  \theta = arctan(r/1); \ \ \varphi=arctan(b/a)$$
 
-The radially symmetric distortion of fisheye lenses is incorporated in the following conversion:
+The radially symmetric distortion of fisheye lenses is incorporated in the following conversion:  
+
 $$ \theta_{d} = \theta(1+k_1\theta^2+k_2\theta^4+k_3\theta^6+k_4\theta^8) $$
-3D points are distortedly projected onto the normalized image coordinates(focal length = 1). Please notice $\theta_d$ represents the length from the optical axis to the projected point on the normalized image coordinates. It is more like a radius rather than an angle. Two components x' and y' are computed as:
+
+3D points are distortedly projected onto the normalized image coordinates(focal length = 1). Please notice $\theta_d$ represents the length from the optical axis to the projected point on the normalized image coordinates. It is more like a radius rather than an angle. Two components x' and y' are computed as:      
+
 $$ x' = \theta_{d}cos\varphi = \theta_{d}({a \over r});\ y' = \theta_{d}sin\varphi=\theta_{d}({b \over r})$$
+
 Finally, the coordinates of the image plane, $p(u,v)$, is obtained by perspective projection:
+
 $$ u = f_x  (x' + \alpha y');\ v=f_yy' + c_y $$
 
 <p align="center">
